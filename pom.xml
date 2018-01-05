@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+ 
+ <!-- 当前工程的坐标 -->
+  <groupId>com.hz</groupId>
+  <artifactId>hz-maven</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- 当前工程的打包方式,如果不写这行，默认就是jar -->
+  <packaging>war</packaging>
+ 
+ <!-- 工程信息 -->
+  <name>hz-maven Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>hz-maven</finalName>
+    <plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<port>80</port>
+					<path>/dd</path>
+				</configuration>
+			</plugin>
+		</plugins>
+  </build>
+</project>
